@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BarchartComponent } from './shared/barchart/barchart.component';
+import { HeatmapComponent } from './shared/heatmap/heatmap.component';
 import { routing, appRoutingProviders } from './app.routes';
 
 
@@ -13,7 +14,8 @@ import { routing, appRoutingProviders } from './app.routes';
   declarations: [
     AppComponent,
     HomeComponent,
-    BarchartComponent
+    BarchartComponent,
+    HeatmapComponent
   ],
   imports: [
     BrowserModule,

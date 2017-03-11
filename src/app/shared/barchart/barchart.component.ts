@@ -29,7 +29,7 @@ export class BarchartComponent implements OnInit, OnChanges {
     }
   }
 
-  ngOnChanges() {
+  ngOnChanges(...args: any[]) {
     if (this.chart) {
       this.updateChart();
     }

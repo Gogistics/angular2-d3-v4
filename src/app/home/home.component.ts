@@ -7,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   private chartData: Array<any>;
+  private heatMapData: Array<any>;
 
   constructor() {}
 
   ngOnInit() {
     // give everything a chance to get loaded before starting the animation to reduce choppiness
     setTimeout(() => {
-      this.generateData();
+      this.generateData(); // chart
+      this.generateHeatMapData(); // heatmap
 
       // change the data periodically
-      setInterval(() => this.generateData(), 3000);
+      setInterval(() => this.generateData(), 5000);
+      setInterval(() => this.generateHeatMapData(), 5000);
     }, 1000);
   }
 
@@ -27,6 +30,17 @@ export class HomeComponent implements OnInit {
         `Index ${i}`,
         Math.floor(Math.random() * 100)
       ]);
+    }
+  }
+
+  generateHeatMapData() {
+    this.heatMapData = [];
+    // day
+    for (let i = 1; i < 8; i++) {
+      // hour
+      for (let j = 1; j < 25; j++) {
+        this.heatMapData.push({day: i, hour: j, value: Math.round(Math.random() * 20)});
+      }
     }
   }
 }
