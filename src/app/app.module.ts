@@ -4,18 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { BarchartComponent } from './shared/barchart/barchart.component';
-import { HeatmapComponent } from './shared/heatmap/heatmap.component';
 import { routing, appRoutingProviders } from './app.routes';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DefaultComponent } from './shared/default/default.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    BarchartComponent,
-    HeatmapComponent
+    NotFoundComponent,
+    DefaultComponent
   ],
   imports: [
     BrowserModule,
